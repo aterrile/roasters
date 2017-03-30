@@ -61,7 +61,6 @@
 </head>
 
 <body <?php body_class() ?>>
-
     <header>
         <nav id="mainNav" class="navbar navbar-default">
             

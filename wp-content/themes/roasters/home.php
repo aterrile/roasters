@@ -3,9 +3,9 @@
  * Template Name: Homepage
  *
  */
- 
+
+
 get_header(); 
-echo "test";
 while( have_posts() ) : the_post();
 $arr_pines = array();
 $args = array(
@@ -13,7 +13,6 @@ $args = array(
     'posts_per_page' => -1
 );
 $frase_home = get_field('frase_home');
-
 $query = new WP_Query( $args );
 while( $query->have_posts() ) : $query->the_post();
     $image_id = get_post_thumbnail_id( get_the_ID() );
@@ -28,7 +27,6 @@ while( $query->have_posts() ) : $query->the_post();
         'y' => get_field('posicion_y')
     );
 endwhile;
-show_array($arr_pines);
 ?>
 <section id="home">
     <div class="row no-margin">
