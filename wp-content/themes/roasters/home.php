@@ -3,7 +3,9 @@
  * Template Name: Homepage
  *
  */
+ 
 get_header(); 
+echo "test";
 while( have_posts() ) : the_post();
 $arr_pines = array();
 $args = array(
@@ -26,6 +28,7 @@ while( $query->have_posts() ) : $query->the_post();
         'y' => get_field('posicion_y')
     );
 endwhile;
+show_array($arr_pines);
 ?>
 <section id="home">
     <div class="row no-margin">
